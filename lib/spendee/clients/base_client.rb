@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Spendee
   module Clients
     class BaseClient < ApiStruct::Client
