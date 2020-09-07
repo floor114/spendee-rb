@@ -1,10 +1,10 @@
 module Spendee
   module Clients
     class WalletGetTransactions < BaseClient
-      spendee_api 'wallet-get-transactions'
+      spendee_api 'v1.8/wallet-get-transactions'
 
-      def index(api_uuid)
-        post(headers: default_headers(api_uuid))
+      def index(token, device_uuid)
+        post(headers: default_headers(token, device_uuid))
       end
     end
   end

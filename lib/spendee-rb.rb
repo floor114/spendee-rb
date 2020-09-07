@@ -16,7 +16,8 @@ module Spendee
   module Clients
     autoload :BaseClient, 'spendee/clients/base_client'
 
-    autoload :UserLogin, 'spendee/clients/user_login'
+    autoload :VerifyIdentity, 'spendee/clients/verify_identity'
+    autoload :Login, 'spendee/clients/login'
     autoload :UserGetProfile, 'spendee/clients/user_get_profile'
     autoload :WalletGetAll, 'spendee/clients/wallet_get_all'
     autoload :WalletGetTransactions, 'spendee/clients/wallet_get_transactions'
@@ -24,7 +25,8 @@ module Spendee
     autoload :GetAllUserCategories, 'spendee/clients/get_all_user_categories'
   end
 
-  autoload :UserLogin, 'spendee/user_login'
+  autoload :VerifyIdentity, 'spendee/verify_identity'
+  autoload :Login, 'spendee/login'
   autoload :UserProfile, 'spendee/user_profile'
   autoload :Wallet, 'spendee/wallet'
   autoload :Transaction, 'spendee/transaction'

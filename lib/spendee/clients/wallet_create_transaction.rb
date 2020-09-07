@@ -1,9 +1,9 @@
 module Spendee
   module Clients
     class WalletCreateTransaction < BaseClient
-      spendee_api 'wallet-create-transaction'
+      spendee_api 'v1.8/wallet-create-transaction'
 
-      def create(api_uuid, amount:, start_date:, wallet_id:, note:, category_id:, timezone:, offset:)
+      def create(token, device_uuid, amount:, start_date:, wallet_id:, note:, category_id:, timezone:, offset:)
         post(
           body:    {
             amount:      amount,
@@ -14,7 +14,7 @@ module Spendee
             timezone:    timezone,
             offset:      offset
           }.to_json,
-          headers: default_headers(api_uuid)
+          headers: default_headers(token, device_uuid)
         )
       end
     end
